@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pre 3</title>
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Simulador de Catálogo de Ropa</h1>
@@ -14,6 +15,25 @@
   
     <h2>Catálogo de Ropa</h2>
     <ul id="catalogo"></ul>
+    <form id="filtroForm">
+        <label>
+          Buscar producto por color:
+          <input type="text" id="colorBuscado" />
+          <button type="submit">Buscar</button>
+        </label>
+      </form>
+    
+      <form id="filtrarForm">
+        <label>
+          Filtrar productos por colores (separados por comas):
+          <input type="text" id="coloresFiltrados" />
+          <button type="submit">Filtrar</button>
+        </label>
+      </form>
+    
+      <div id="resultado">
+        <!-- Aquí se mostrarán los resultados -->
+      </div>
     
     <div id="formulario" style="display: none;">
         <label for="nombre">Nombre del producto:</label>
@@ -35,5 +55,6 @@
     </div>
     
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

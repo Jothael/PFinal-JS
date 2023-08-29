@@ -1,5 +1,15 @@
 const catalogoKey = "catalogo";
 let catalogo = cargarCatalogoDesdeLocalStorage() || [];
+fetch("index.json")
+  .then(response => response.json())
+  .then(data => {
+    catalogo.push(...data); 
+    actualizarCatalogo(); 
+  })
+  .catch(error => {
+    console.error("Error al cargar los datos desde el archivo JSON:", error);
+  });
+
 
 function cargarCatalogoDesdeLocalStorage() {
     const catalogoGuardado = localStorage.getItem(catalogoKey);
@@ -38,11 +48,20 @@ document.getElementById("guardar").addEventListener("click", () => {
         document.getElementById("descripcion").value = "";
         document.getElementById("talla").value = "";
         document.getElementById("colores").value = "";
-        alert("Los productos han sido agregados con éxito.")
+        Swal.fire(
+          '¡Excelente!',
+          'Los productos han sido agregados con éxito.',
+          'success'
+        )
     } else {
-        alert("Por favor, ingresa valores válidos para el producto.");
+      Swal.fire({
+        icon: 'error',
+        title: 'Error...',
+        text: 'Por favor, ingresa valores válidos para el producto.',
+      })
     }
 });
+
 function buscarPorColor(colorBuscado) {
   return catalogo.filter(producto => producto.colores.includes(colorBuscado));
 }

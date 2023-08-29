@@ -1,0 +1,32 @@
+[
+    {
+      "nombre": "Prenda 1",
+      "precio": 29.99,
+      "descripcion": "prenda 1",
+      "talla": "M",
+      "colores": ["Rojo", "Azul"]
+    },
+    {
+      "nombre": "Botas 1",
+      "precio": 49.99,
+      "descripcion": "Botas 1",
+      "talla": "L",
+      "colores": ["Negro", "Blanco"]
+    
+    },
+    {
+        "nombre": "Prenda 2",
+        "precio": 99.99,
+        "descripcion": "prenda 2",
+        "talla": "M",
+        "colores": ["Rojo", "Azul"]
+      },
+      {
+        "nombre": "Botas 2",
+        "precio": 69.99,
+        "descripcion": "Botas 2",
+        "talla": "L",
+        "colores": ["Negro", "Blanco"]
+      }
+  ]
+  
